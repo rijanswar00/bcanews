@@ -22,7 +22,7 @@
         <div class="row">
             <!-- LOGO -->
             <div class=" col-md-offset-4 col-md-4">
-                <a href="index.php" id="logo"><img src="images/news.jpg"></a>
+                <a href="index.php" id="logo"><img src="images/logo.png"></a>
             </div>
             <!-- /LOGO -->
         </div>

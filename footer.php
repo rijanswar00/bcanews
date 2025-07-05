@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <span>© Copyright <?php echo date('Y'); ?> News</span>
+                <span>© Copyright <?php echo date('Y'); ?> bcanews</span>
             </div>
         </div>
     </div>
