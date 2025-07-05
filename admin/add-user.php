@@ -1,8 +1,8 @@
 <?php
 include "header.php";
+include 'config.php';
 
 if (isset($_POST['save'])) {
-    include 'config.php';
 
     $fname = mysqli_real_escape_string($conn, $_POST['fname']);
     $lname = mysqli_real_escape_string($conn, $_POST['lname']);
@@ -18,7 +18,7 @@ if (isset($_POST['save'])) {
     } else {
         $sql1 = "INSERT INTO user (first_name, last_name, username, password, role) 
                     VALUES ('{$fname}', '{$lname}', '{$user}', '{$password}', '{$role}')";
-        if(mysqli_query($conn, $sql1)){
+        if (mysqli_query($conn, $sql1)) {
             header("Location: {$hostname}/admin/users.php");
         }
     }
