@@ -2,6 +2,9 @@
 include "header.php";
 include 'config.php';
 $cat_id = $_GET['id'];
+if ($_SESSION['user_role'] == '0') {
+    header("Location: {$hostname}/admin/post.php");
+}
 
 if (isset($_POST['submit'])) {
 

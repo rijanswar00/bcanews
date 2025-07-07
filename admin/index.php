@@ -1,3 +1,15 @@
+<?php
+include 'config.php';
+
+session_start();
+
+if (isset($_SESSION['user_name'])) {
+
+    header("Location: {$hostname}/admin/post.php");
+}
+
+?>
+
 <!doctype html>
 <html>
 
@@ -33,7 +45,6 @@
                     <!-- /Form  End -->
 
                     <?php
-                    include 'config.php';
 
                     if (isset($_POST['login'])) {
 
@@ -45,8 +56,8 @@
 
                         if (mysqli_num_rows($result) > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
-                                
-                                session_start();
+
+                                // session_start();
 
                                 $_SESSION["user_name"] = $row['username'];
                                 $_SESSION["user_id"] = $row['user_id'];

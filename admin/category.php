@@ -1,6 +1,9 @@
 <?php
 include "header.php";
 include 'config.php';
+if ($_SESSION['user_role'] == '0') {
+    header("Location: {$hostname}/admin/post.php");
+}
 ?>
 <div id="admin-content">
     <div class="container">
