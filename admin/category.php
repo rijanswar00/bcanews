@@ -40,7 +40,7 @@ if ($_SESSION['user_role'] == '0') {
                                 <tr>
                                     <td class='id'><?= $i; ?></td>
                                     <td><?= $row['category_name'] ?></td>
-                                    <td>5</td>
+                                    <td><?= $row['post'] ?></td>
                                     <td class='edit'><a href='update-category.php?id=<?= $row['category_id']; ?>'><i class='fa fa-edit'></i></a></td>
                                     <td class='delete'><a href='delete-category.php?id=<?= $row['category_id']; ?>'><i class='fa fa-trash-o'></i></a></td>
                                 </tr>
